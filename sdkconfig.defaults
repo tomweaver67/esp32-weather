@@ -1,0 +1,13 @@
+# Waveshare ESP32-C6-LCD-1.47: 4MB flash, USB-Serial-JTAG is the only
+# console available over the board's single USB-C port.
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
+
+# Default single-app partitions (1MB/1.5MB) are too small once WiFi + LVGL +
+# the mbedTLS cert bundle are linked in - use a custom 2MB app partition.
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+
+# LVGL fonts used by the weather layout (14 is enabled by default already).
+CONFIG_LV_FONT_MONTSERRAT_20=y
+CONFIG_LV_FONT_MONTSERRAT_32=y

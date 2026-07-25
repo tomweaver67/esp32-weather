@@ -1,0 +1,7 @@
+# Name,   Type, SubType, Offset,  Size, Flags
+# WiFi + LVGL + mbedTLS cert bundle push the binary past the default 1MB/1.5MB
+# single-app partition sizes, so this board (4MB flash, no OTA needed) gets a
+# custom table with a 2MB app partition for headroom.
+nvs,      data, nvs,     0x9000,  0x6000,
+phy_init, data, phy,     0xf000,  0x1000,
+factory,  app,  factory, 0x10000, 2M,
