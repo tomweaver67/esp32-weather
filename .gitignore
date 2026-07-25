@@ -1,0 +1,7 @@
+build/
+managed_components/
+sdkconfig
+sdkconfig.old
+
+# Real WiFi credentials - copy secrets.h.example to secrets.h and fill in
+main/secrets.h
